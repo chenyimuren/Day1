@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.over{overflow: hidden;zoom: 1;}
+			
+			body{
+				background-image: url(img/bg.png);
+			}
+			.top{
+				background: url(img/rag.png) repeat-x top;
+			}
+			
+			.left{
+				position: relative;
+				float: left;
+				margin: 10px 0px 0px 50px;
+			}
+			.logo{
+				position: absolute;
+				top: 115px;
+				left: 55px;
+			}
+			.nav{
+				width: 900px;
+				margin: 10px auto 0;
+				/*border: 1px solid red;*/
+			}
+			.nav ul li{
+				float:left;
+				/*height: 100px;*/
+				width: 300px;
+				/*line-height: 200px;*/
+				margin-right: 0; 
+			}
+			.nav ul li a{
+				display: block;
+				text-decoration: none;
+				width: 300px;
+				/*height: 100px;*/
+				/*border: 1px solid blueviolet;*/
+				text-align: center;
+				font-size: 16px;
+				color: #AD1515;
+				font-weight: bold;
+				border-top: 1px solid #666666;
+				border-bottom: 1px solid #666666;
+				/*border:solid #666;
+				border-width: 1px 0 1px 0;*/
+				padding: 20px 0 20px 0;
+				margin-bottom: 10px;
+			} 
+			.nav ul li span{
+				display: block;
+				color: #B41919;
+				font-size: 14px;
+				font-weight: normal;
+			}
+			
+			.nav ul li a:hover{
+				background: url(img/ornament.png) no-repeat;
+				background-position:-850px 60px;
+				color: #E56830;
+				border-bottom-width: 0;
+			}
+			.nav ul li a:hover span{
+				color: #E56830;
+			}
+			
+			.right{
+				width: 900px;
+				float: right;
+				margin: 10px auto 0;
+				text-align: center;
+				
+			} 
+			h2{
+				color: #6C2E2E;
+				margin: 10px;
+				/*font-size: 28px;*/
+			}
+			p{
+				color: #2B2B2B;
+				line-height: 28px;
+				font-size: 14px;
+				width: 900px;
+				text-align: left;
+				margin-bottom: 20px;
+			}
+			.images{
+				width: 900px;
+				margin: 10px auto 0;
+				
+			}
+			
+			dl dt img{
+				width: 115px;
+				border-radius: 10px;
+				box-shadow: 0 5px 10px black;
+				height: 115px;
+				/*margin-bottom: 10px;*/
+				
+			}
+			dl{
+				margin-top: 10px;
+				float: left;
+				margin-right: 30px;
+			}
+			
+			dl:first-child{
+				margin-left: 0;
+			}
+			dl:last-child{
+				margin-right:0 ;
+			}
+			
+			dd a{
+				display: inline-block;
+				width: 120px;
+				text-align: center;
+				color: #A40101;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+			
+			dd a b{
+				font-size: 14px;
+				letter-spacing: 3px;
+			}
+			
+			dl:hover a{
+				color: #DD2C2C;
+			}
+			.end{
+				margin-top: 10px;
+			}
+			
+			.footer{
+				text-align: center;
+			}
+			
+			.footer span{
+				color: #9A2E9A;
+				font-size: 10px;
+			}
+			
+			.footer span a{
+				color: #890148;
+				
+			}
+			
+			.footer span a:hover{
+				color: #C88201;
+			}
+			
+			@media only screen and (max-width: 1024px) {
+				
+				.nav ul li{
+					float: none;
+				}
+				.nav ul li a{
+					display: inline-block;
+					width: 25%;
+					text-align: center;
+					color: #AD1515;
+					font-weight: bold;
+					font-size: 16px;
+					text-transform: uppercase;
+					padding: 10px 0 10px 0;
+					border: solid  #888583;
+					border-width: 1px 0 1px 0;
+					margin-bottom: 0px;
+				}
+				.left{
+					position: relative;
+					float: none;
+					margin: 5px 5px 0 50px;
+				}
+				
+				.nav{
+					position: absolute;
+					top: 400px;
+					left: -250px;
+					
+				}
+				.right{
+					width:  50%;
+					text-align: ;
+					float: left;
+					margin-top: -300px;
+					margin-left: 400px;
+				}
+				
+				
+				p{
+					color: #2B2B2B;
+					line-height: 28px;
+					font-size: 14px;
+					width: 100%;
+					text-align:center;
+					margin-bottom: 20px;
+				}
+				
+				.end img{
+					width: 100%;
+				}
+			
+				dt img{
+					width: 20%;
+					border-radius: 5%;
+					box-shadow: 0 5px 10px black;
+					height: 20px;
+					
+				}
+				
+				dd a{
+					display: inline-block;
+					width: 100%;
+					text-align: center;
+					color: #A40101;
+					font-size: 12px;
+					text-transform: uppercase;
+				}
+				
+				dl{
+					margin-top: 20px;
+					float: left;
+					margin-left: 1px;
+					width: 16%;
+				}
+				
+				.images{
+					overflow: hidden;
+					zoom: 1;
+					widows: 60%;
+				}
+				
+				.top img{
+					width: 100%;
+				}
+				
+			}
+			
+			@media only screen and (max-width: 960px) {
+				
+				body{
+					position: relative;
+				}
+				
+				.imge{
+					display: none;
+				}
+				
+				.logo{
+					display:block;
+					position: absolute;
+					top: 150px;
+					left: 40%;
+					
+				}
+				
+				
+				.nav{
+					position: absolute;
+					top:20px;
+					left: -250px;
+				}
+				
+				.{
+					position: absolute;
+					top: 300px;
+					left: 20px;
+				}
+				
+				.nav{
+					width: 900px;
+					margin: 0 auto;
+					position: absolute;
+					top: 50px;
+					left:-300px;
+				}
+			
+				.nav ul{
+					overflow: hidden;
+					zoom: 1;
+					position: absolute;
+					top: 0px;
+					left: 300px;
+					width: 50%;
+				}
+				
+				.nav ul li a{
+					float: left;
+					display: inline-block;
+					width: 33%;
+					text-align: center;
+					color: #AD1515;
+					font-weight: bold;
+					font-size: 16px;
+					text-transform: uppercase;
+					padding: 20px 0 20px 0;
+					border: solid  #888583;
+					border-width: 1px 0 1px 0;
+					margin-bottom: 10px;
+				
+				
+				.images{
+					overflow: hidden;
+					zoom: 1;
+					widows: 40%;
+				}
+				
+				.top img{
+					width: 100%;
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+			}
+			
+			
+		</style>
+		
+		
+	</head>
+	<body>
+		<div class="container">
+			<!--top start-->
+			<div class="bgcolor">
+				<div class="top">
+				<img src="img/rag.png"/>
+				</div>
+			</div>
+			<!--top end-->
+				
+			<!--left start-->
+			<div class="left over">
+				<img src="img/logo-bg.png" class="imge"/>
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+			</div>
+			<!--left end-->
+			
+			<!--right start-->
+				<div class="right">
+					
+					<!--nav start-->
+						<div class="nav over">
+							<ul>
+								<li><a href="#"><span>THE</span>WEBLOGUE</a></li>
+								<li><a href="#"><span>BACK</span>ISSUES</a></li>
+								<li><a href="#"><span>ABOUT</span>OUR PAPER</a></li>
+							</ul>
+						</div>
+					
+					<!--nav end-->
+					<!--content start-->
+						<div class="content">
+							<h2>“Give me problems, give me&nbsp;<i>work</i>.”</h2>
+							<p>In the year 1878 I took my degree of Doctor of Medicine of the University of London, and proceeded to Netley to go through the course prescribed for surgeons in the army. Having completed my studies there, I was duly attached to the Fifth Northumberland Fusiliers as Assistant Surgeon. The regiment was stationed in India at the time, and before I could join it, the second Afghan war had broken out. On landing at Bombay, I learned that my corps had advanced through the passes, and was already deep in the enemy’s&nbsp;country.</p>
+							<h2><b>Victors <abbr class="amp" title="And">&amp;</abbr> Villains</b></h2>
+						</div>	
+						<div class="images over">
+		
+						<dl>
+							<dt><a href="#"><img src="img/f-holmes.jpg"/></a></dt>
+							<dd><a href="#">Sherlock</a></dd>
+							<dd><a href="#"><b>Holmes</b></a></dd>
+						</dl>
+						
+						<dl>
+							<dt><a href="#"><img src="img/f-moriarty.jpg"/></a></dt>
+							<dd><a href="#">Sherlock</a></dd>
+							<dd><a href="#"><b>Holmes</b></a></dd>
+						</dl>
+						
+						<dl>
+							<dt><a href="#"><img src="img/f-mycroft.jpg"/></a></dt>
+							<dd><a href="#">Sherlock</a></dd>
+							<dd><a href="#"><b>Holmes</b></a></dd>
+						</dl>
+						
+						<dl>
+							<dt><a href="#"><img src="img/f-mycroft.jpg"/></a></dt>
+							<dd><a href="#">Sherlock</a></dd>
+							<dd><a href="#"><b>Holmes</b></a></dd>
+						</dl>
+						
+						<dl>
+							<dt><a href="#"><img src="img/f-watson.jpg"/></a></dt>
+							<dd><a href="#">Sherlock</a></dd>
+							<dd><a href="#"><b>Holmes</b></a></dd>
+						</dl>
+						
+						<dl>
+							<dt><a href="#"><img src="img/f-winter.jpg"/></a></dt>
+							<dd><a href="#">Sherlock</a></dd>
+							<dd><a href="#"><b>Holmes</b></a></dd>
+						</dl>
+					</div>
+					
+					<div class="end">
+						<img src="img/ornament.png" width="950"/>
+					</div>
+					<div class="footer">
+						<span>Illustrations by
+						<a href="#">Sidney Paget</a>, words by
+						<a href="#">Sir Arthur Conan Doyle</a>.
+						</span>
+						<br />
+						<span>What remains is by
+						<a href="#">Ethan Marcotte</a>.
+						</span>
+					</div>
+					
+				</div>
+			<!--right end-->
+		</div>
+	</body>
+</html>
